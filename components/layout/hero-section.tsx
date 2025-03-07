@@ -1,23 +1,42 @@
-// src/components/layout/hero-section.tsx
+// components/layout/hero-section.tsx
+'use client';
+
 import SearchBar from "@/components/ui/search-bar";
 
-export default function HeroSection() {
+const backgroundImages = [
+    '/images/concert-bg.jpg',
+    '/images/party-bg.jpg',
+    '/images/sports-bg.jpg',
+    '/images/show-bg.jpg'
+];
+
+export default function HeroSection({ children }) {
+
     return (
-        <section className="relative bg-black h-screen flex flex-col items-center justify-center text-white">
-            {/* Background image */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src="/images/stadium-bg.jpg"
-                    alt="Stadium"
-                    className="w-full h-full object-cover opacity-40"
-                />
+        <section className="hero-container">
+            {/* Background image carousel */}
+            <div className="hero-background">
+
+                {/* Dark overlay */}
+                <div className="hero-overlay"></div>
             </div>
 
-            <div className="relative z-10 text-center px-4 max-w-md mx-auto">
-                <h1 className="text-4xl md:text-5xl font-bold mb-2">Let there be live</h1>
-                <p className="text-xl mb-8">Your next best-night-ever is waiting</p>
+            {/* Stadium lights - left and right */}
+            <div className="stadium-light right"></div>
+            <div className="stadium-light left"></div>
 
-                <SearchBar />
+            <div className="hero-content">
+                <h1>Unleash the Night</h1>
+                <p>Your next best-night-ever is waiting</p>
+
+                <div className="search-container">
+                    <SearchBar />
+                </div>
+
+                {/* Trending Events section directly in hero */}
+                <div className="hero-bottom-content">
+                    {children}
+                </div>
             </div>
         </section>
     );

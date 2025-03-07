@@ -13,20 +13,41 @@ export default function SearchBar() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="relative w-full shadow-xl">
-            <div className="flex justify-between items-center w-full">
-                <div className="items-center pointer-events-none ">
-                    <FiSearch className="text-gray-500 pr-5" size={20} />
-                </div>
-                <div className="w-full  text-white rounded-lg border-solid border-white-200">
-                    <input
-                        type="text"
-                        placeholder="Performer, event, venue"
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
-                        className="w-full focus:white-indigo-600 focus:outline-hidden"
-                    />
-                </div>
+        <form onSubmit={handleSubmit} style={{
+            width: '100%',
+            maxWidth: '600px',
+            margin: '0 auto'
+        }}>
+            <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                backgroundColor: 'white',
+                borderRadius: '8px',
+                padding: '0 16px',
+                height: '56px',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+            }}>
+                <FiSearch style={{
+                    color: '#888',
+                    width: '20px',
+                    height: '20px',
+                    marginRight: '12px'
+                }} />
+
+                <input
+                    type="text"
+                    placeholder="What do you want to see live?"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    style={{
+                        flex: '1',
+                        border: 'none',
+                        padding: '0',
+                        fontSize: '16px',
+                        outline: 'none',
+                        backgroundColor: 'transparent'
+                    }}
+                />
             </div>
         </form>
     );
