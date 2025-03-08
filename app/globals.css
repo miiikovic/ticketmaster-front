@@ -129,7 +129,7 @@ body, html {
 /* Hero container and carousel styles */
 .hero-container {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
   overflow: hidden;
   background-color: black;
 }
@@ -593,7 +593,6 @@ body, html {
 .footer {
   background-color: white;
   color: #333;
-  margin-top: 32px;
 }
 
 .footer .container {

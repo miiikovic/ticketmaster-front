@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import Navbar from '@/components/layout/navbar';
 import Footer from '@/components/layout/footer';
 import React from "react";
+import Divider from "@/components/ui/divider";
 
 export const metadata: Metadata = {
     title: 'Ticketmaster - Find Tickets for Sports, Concerts & More',
@@ -17,11 +18,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-        <body suppressHydrationWarning>
-        <Navbar />
-        {children}
-        <Footer />
-        </body>
+            <body suppressHydrationWarning>
+                <Navbar />
+                    {children}
+                    <Divider marginY={0} />
+                <Footer />
+            </body>
         </html>
     );
 }
