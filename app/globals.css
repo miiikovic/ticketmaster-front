@@ -792,6 +792,14 @@ html {
   }
 }
 
+@media (max-width: 767px) {
+  .spotify-section {
+    padding: 12px 16px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 13px;
@@ -988,6 +996,18 @@ html {
   flex-direction: column;
 }
 
+.spotify-container-mobile {
+  padding: 24px 16px;
+  background-color: #000;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
 .spotify-content {
   margin-bottom: 1rem;
   width: 100%;
@@ -1002,6 +1022,31 @@ html {
   width: 36px;
   height: 36px;
   margin-left: -10px;
+}
+
+.artist-images-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+}
+
+.artist-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  margin: 0 -8px;
+  position: relative;
+}
+
+.artist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .spotify-text h3 {
@@ -1022,6 +1067,48 @@ html {
   width: 16px;
   height: 16px;
   margin-right: 6px;
+}
+
+/* Mobile text styling */
+.spotify-text-mobile {
+  margin-bottom: 16px;
+}
+
+.spotify-text-mobile h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.spotify-text-mobile p {
+  color: #bbb;
+  font-size: 0.875rem;
+  margin: 0;
+  max-width: 280px;
+}
+
+/* Mobile button styling */
+.spotify-button-mobile {
+  background-color: #1DB954;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  width: auto;
+  min-width: 140px;
+}
+
+.spotify-button-mobile .spotify-icon {
+  width: 20px;
+  height: 20px;
 }
 
 /* Browse events section responsive adjustments */
@@ -1080,6 +1167,10 @@ html {
   .spotify-content {
     margin-bottom: 0;
     width: auto;
+  }
+
+  .spotify-container-mobile {
+    display: none;
   }
 
   .artist-avatar {

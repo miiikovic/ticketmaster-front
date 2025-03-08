@@ -1,14 +1,24 @@
 /* Main section styles */
 .browseEventsSection {
-    padding: 48px 24px;
-    margin: 0 auto;
+    width: 100%;
     background-color: white;
     color: #333;
+    padding: 48px 0;
 }
 
 .browseEventsContainer {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.fullWidthDivider {
+    width: 100%;
+    margin: 24px 0;
+}
+
+.fullWidthDivider > div {
+    width: 100%;
 }
 
 /* Header styles */

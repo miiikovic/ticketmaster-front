@@ -88,8 +88,8 @@ const BrowseEventsSection = () => {
 
     return (
         <section className={styles.browseEventsSection}>
+            {/* Header section with contained width */}
             <div className={styles.browseEventsContainer}>
-                {/* Location header with browse events title */}
                 <div className={styles.header}>
                     <div className={styles.browseLabel}>
                         <span>Browse Events</span>
@@ -107,10 +107,14 @@ const BrowseEventsSection = () => {
                     </div>
                 </div>
             </div>
-            <Divider/>
+
+            {/* Full width divider outside the container */}
+            <div className={styles.fullWidthDivider}>
+                <Divider marginY={0} />
+            </div>
+
+            {/* Content section with contained width */}
             <div className={styles.browseEventsContainer}>
-
-
                 {/* Categories section */}
                 <div className={styles.section}>
                     <div className={styles.sectionHeader}>
